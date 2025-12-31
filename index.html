@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>Payslip Maker Pro — Royal Edition (Slip Gaji Otomatis)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplikasi pembuat slip gaji otomatis. Fitur terbilang otomatis, smart memory, format A4 siap cetak. Solusi HR & UMKM.">
+  
+  <meta name="google-site-verification" content="F8-qAir322zBSKzxINGeb_ahWPg-JPWwtIBUBm-Osik" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#b78846',
+            navy: '#0f172a',
+            lightnavy: '#1e293b',
+            danger: '#dc2626'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Cinzel', 'serif']
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-slate-50 text-gray-800 font-sans">
+
+<div id="sticky-timer" class="fixed top-0 left-0 w-full bg-danger text-white text-center py-2 z-50 shadow-md hidden">
+  <p class="text-sm md:text-base font-bold">
+    ⏳ PROMO ROYAL EDITION BERAKHIR DALAM: 
+    <span id="timer-display" class="bg-white text-danger px-2 py-0.5 rounded ml-2 font-mono text-lg">02:00:00</span>
+  </p>
+</div>
+
+<div class="h-10"></div>
+
+<section class="bg-navy text-white py-16 px-6 relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <div class="inline-block bg-navy/50 border border-gold text-gold px-4 py-1 rounded-full text-sm font-bold mb-6 tracking-wider">
+      ♕ SOFTWARE HRD & UMKM TERBAIK
+    </div>
+    
+    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 font-serif">
+      Buat Slip Gaji Premium <br>
+      <span class="text-gold">Tanpa Rumus Excel</span>
+    </h1>
+
+    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-8 font-light">
+      Lupakan rumus error. Otomatis hitung total, otomatis muncul kalimat <strong>"Terbilang"</strong>, dan format 2-rangkap (Karyawan & Arsip) dalam satu halaman.
+    </p>
+
+    <div class="mb-8 p-5 bg-white/5 rounded-xl inline-block backdrop-blur-sm border border-gold/30">
+      <p class="text-sm text-gray-400 mb-1 uppercase tracking-widest">Penawaran Spesial Hari Ini</p>
+      <div class="flex items-center justify-center gap-4">
+        <span class="line-through text-gray-500 text-xl decoration-red-500">Rp 349.000</span>
+        <span class="text-gold text-5xl font-serif font-bold">Rp 89.000</span>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-4 justify-center">
+      <a href="#checkout" class="bg-gold text-white px-8 py-4 rounded-lg font-bold text-xl hover:bg-yellow-600 transition transform hover:-translate-y-1 shadow-lg shadow-gold/20 flex items-center justify-center gap-2">
+        <span>🚀</span> Ambil Promo Sekarang
+      </a>
+      <a href="#demo" class="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-bold text-xl hover:bg-lightnavy transition">
+        Lihat Preview
+      </a>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-6 flex justify-center gap-4">
+      <span>🔒 Privasi Aman (Offline Mode)</span>
+      <span>⚡ Android & PC Friendly</span>
+      <span>∞ Lifetime Access</span>
+    </p>
+  </div>
+</section>
+
+<section class="bg-white border-b border-gray-200 py-10 shadow-sm relative z-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100">
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-navy mb-1">8.400+</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Downloads</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-gold mb-1">3.200+</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Perusahaan / UMKM</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-navy mb-1">100%</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Akurasi Hitungan</span>
+      </div>
+      <div class="flex flex-col items-center">
+        <span class="text-4xl font-extrabold text-gold mb-1">4.9/5</span>
+        <span class="text-xs text-gray-500 font-bold uppercase tracking-wide">Rating User</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="py-16 px-6 bg-slate-50">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4 text-navy">Tampilan Royal & Eksklusif</h2>
+    <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
+      Desain slip gaji yang meningkatkan kredibilitas perusahaan Anda di mata karyawan. Rapi, terbaca jelas, dan standar korporat.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6 items-start">
+      <div class="group relative rounded-xl overflow-hidden shadow-2xl border border-gray-200 bg-white">
+        <div class="absolute top-2 left-2 bg-navy text-white text-xs px-2 py-1 rounded z-10">Editor (Isi Data)</div>
+        <img src="preview-payslip.jpg" alt="Input Data Slip Gaji" class="w-full h-auto transform group-hover:scale-102 transition duration-500">
+      </div>
+      <div class="group relative rounded-xl overflow-hidden shadow-2xl border border-gray-200 bg-white">
+        <div class="absolute top-2 left-2 bg-navy text-white text-xs px-2 py-1 rounded z-10">Hasil Cetak (PDF)</div>
+        <img src="preview-payslip1.jpg" alt="Preview Print A4" class="w-full h-auto transform group-hover:scale-102 transition duration-500">
+      </div>
+      <div class="group relative rounded-xl overflow-hidden shadow-2xl border border-gray-200 bg-white">
+        <div class="absolute top-2 left-2 bg-navy text-white text-xs px-2 py-1 rounded z-10">Tampilan Android</div>
+        <img src="preview-payslip2.jpg" alt="Fitur Mobile" class="w-full h-auto transform group-hover:scale-102 transition duration-500">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 px-6 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12 text-navy">
+      Tinggalkan Cara Lama yang <span class="text-danger">Ribet</span>
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-6">
+        <div class="flex gap-4">
+          <div class="bg-navy p-3 rounded-lg h-fit text-gold shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" /></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-navy">Fitur Auto-Terbilang</h3>
+            <p class="text-gray-600 text-sm">
+              Tidak perlu pusing mikirin rumus Excel untuk mengubah angka menjadi huruf. Ketik angka, kalimat terbilang muncul otomatis.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="bg-navy p-3 rounded-lg h-fit text-gold shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-navy">Format 2-in-1 Hemat Kertas</h3>
+            <p class="text-gray-600 text-sm">
+              Satu lembar A4 dibagi otomatis menjadi 2 bagian: Atas untuk Karyawan, Bawah untuk Arsip Kantor. Tinggal gunting.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="bg-navy p-3 rounded-lg h-fit text-gold shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-1 text-navy">Data Aman (Smart Memory)</h3>
+            <p class="text-gray-600 text-sm">
+              Data perusahaan tersimpan di memori Browser Laptop/HP Anda. Privasi terjamin karena tidak di-upload ke server orang lain.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+        <h4 class="font-bold mb-4 text-center text-navy font-serif">PERBANDINGAN SISTEM</h4>
+        <div class="space-y-4 text-sm">
+          <div class="flex justify-between items-center border-b border-gray-100 pb-2">
+            <span class="text-gray-500">Bikin Terbilang</span>
+            <span class="text-red-500 font-bold">❌ Manual/Rumus Susah</span>
+          </div>
+          <div class="bg-navy p-4 rounded text-center mt-4">
+            <p class="font-serif font-bold text-gold mb-1">PAYSLIP MAKER PRO</p>
+            <p class="text-white text-lg">✅ SEMUA OTOMATIS!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 px-6 bg-slate-50">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10 text-navy">Cara Pakai (Sangat Mudah)</h2>
+    <div class="grid md:grid-cols-4 gap-6 text-left">
+      <div class="relative pl-8 border-l-2 border-gold">
+        <div class="absolute -left-3 top-0 bg-navy text-white w-6 h-6 rounded-full text-center font-bold text-sm leading-6">1</div>
+        <h4 class="font-bold text-lg mb-2 text-navy">Buka File</h4>
+        <p class="text-sm text-gray-600">Buka file HTML dengan Google Chrome di Laptop atau Android.</p>
+      </div>
+      <div class="relative pl-8 border-l-2 border-gold">
+        <div class="absolute -left-3 top-0 bg-navy text-white w-6 h-6 rounded-full text-center font-bold text-sm leading-6">2</div>
+        <h4 class="font-bold text-lg mb-2 text-navy">Setup Data</h4>
+        <p class="text-sm text-gray-600">Upload Logo & Nama PT sekali saja. Sistem akan mengingatnya.</p>
+      </div>
+      <div class="relative pl-8 border-l-2 border-gold">
+        <div class="absolute -left-3 top-0 bg-navy text-white w-6 h-6 rounded-full text-center font-bold text-sm leading-6">3</div>
+        <h4 class="font-bold text-lg mb-2 text-navy">Input Gaji</h4>
+        <p class="text-sm text-gray-600">Isi Gaji Pokok & Tunjangan. Bagian arsip bawah terisi otomatis.</p>
+      </div>
+      <div class="relative pl-8 border-l-2 border-gold">
+        <div class="absolute -left-3 top-0 bg-navy text-white w-6 h-6 rounded-full text-center font-bold text-sm leading-6">4</div>
+        <h4 class="font-bold text-lg mb-2 text-navy">Cetak PDF</h4>
+        <p class="text-sm text-gray-600">Klik "Cetak Slip", pilih Save as PDF atau Print langsung.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="checkout" class="py-20 px-6 bg-navy text-white text-center relative overflow-hidden">
+   <div class="absolute top-0 right-0 w-64 h-64 bg-gold rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow"></div>
+  <div class="max-w-4xl mx-auto relative z-10">
+    <h2 class="text-3xl md:text-5xl font-bold mb-6 font-serif uppercase">Investasi Sekali, Pakai Selamanya</h2>
+    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl max-w-lg mx-auto border border-gold/50 shadow-2xl mb-8 relative">
+      <div class="absolute -top-4 right-4 bg-danger text-white px-4 py-1 rounded-full text-sm font-bold shadow-md transform rotate-2">HEMAT 75%</div>
+      <div class="flex justify-between items-end mb-6">
+        <span class="text-gold font-bold text-xl animate-pulse">HARGA PROMO</span>
+        <span class="text-5xl font-bold text-white font-serif">Rp 89rb</span>
+      </div>
+      <a href="http://lynk.id/tukastore/88q5er1zg88k/checkout" class="block w-full bg-gold text-white font-bold text-xl py-4 rounded-lg hover:bg-yellow-600 transition transform hover:scale-105 shadow-lg border border-yellow-400">DOWNLOAD SEKARANG ➔</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-navy text-gray-500 py-8 text-center text-sm border-t border-gray-800">
+  <p>© 2025 Payslip Maker Pro. All Rights Reserved.</p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const timerElement = document.getElementById('timer-display');
+    const stickyBar = document.getElementById('sticky-timer');
+    const STORAGE_KEY = 'payslip_promo_endtime'; 
+    const DURATION_HOURS = 2;
+    stickyBar.classList.remove('hidden');
+    let endTime = localStorage.getItem(STORAGE_KEY);
+    if (!endTime) {
+      const now = new Date();
+      now.setHours(now.getHours() + DURATION_HOURS);
+      endTime = now.getTime();
+      localStorage.setItem(STORAGE_KEY, endTime);
+    }
+    function updateTimer() {
+      const now = new Date().getTime();
+      const distance = endTime - now;
+      if (distance < 0) { timerElement.innerHTML = "00:00:00"; return; }
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      timerElement.innerHTML = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
+    }
+    setInterval(updateTimer, 1000);
+    updateTimer(); 
+  });
+</script>
+
+</body>
+</html>
