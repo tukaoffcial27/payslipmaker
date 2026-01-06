@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Local data (Optional: JANGAN di-ignore jika Vercel butuh file ini untuk pSEO dinamis)
+# database_pseo.csv
