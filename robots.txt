@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://payslipmaker.netlify.app/sitemap.xml
-Sitemap: https://payslipmaker.guidify.app/sitemap.xml
+Sitemap: https://payslip.guidify.app/sitemap.xml

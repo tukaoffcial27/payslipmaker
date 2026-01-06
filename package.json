@@ -1,7 +1,11 @@
 {
-  "name": "payslip-maker-pro",
+  "name": "funnel-payslip",
   "version": "1.0.0",
+  "description": "pSEO Payslip Maker - Hybrid Static & Dynamic",
   "scripts": {
-    "build": "node generate.js"
-  }
+    "generate:db": "python3 generate_database.py",
+    "build": "python3 generate_pages.py",
+    "dev": "export FLASK_APP=api/index.py && python3 -m flask run"
+  },
+  "dependencies": {}
 }
